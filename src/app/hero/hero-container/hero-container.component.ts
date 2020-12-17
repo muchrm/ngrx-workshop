@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as fromHero from '../hero.reducer';
 import * as heroActions from '../hero.actions';
+import * as fromApp from '../../reducers'
 @Component({
   selector: 'app-hero-container',
   templateUrl: './hero-container.component.html',
@@ -9,7 +10,7 @@ import * as heroActions from '../hero.actions';
 })
 export class HeroContainerComponent implements OnInit {
 
-  constructor(private store$:Store<fromHero.State>) { }
+  constructor(private store$:Store<fromApp.State>) { }
 
   ngOnInit(): void {
   }

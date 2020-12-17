@@ -29,4 +29,4 @@ export function debug(reducer: ActionReducer<State>): ActionReducer<State> {
   };
 }
 
-export const metaReducers: MetaReducer<State>[] = !environment.production ? [] : [debug];
+export const metaReducers: MetaReducer<State>[] = !environment.production ? [debug] : [];

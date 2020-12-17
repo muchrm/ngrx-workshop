@@ -16,8 +16,13 @@ export const initialState: State = {
 };
 
 
-export const reducer = createReducer(
+export const dragonReducer = createReducer(
   initialState,
   on(actions.receiveDamage,(state,{damage}) => ({...state,hitPoint:Math.max(0,state.hitPoint - Math.abs(Math.min(0,state.ammor - damage)))}))
 );
 
+
+
+export function reducer(state: State | undefined, action: Action){
+  return dragonReducer(state,action);
+}

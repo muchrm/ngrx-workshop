@@ -16,8 +16,10 @@ export const initialState: State = {
 };
 
 
-export const reducer = createReducer(
-  initialState,
-
+const heroReducer = createReducer(
+  initialState
 );
 
+export function reducer(state: State | undefined, action: Action){
+  return heroReducer(state,action);
+}

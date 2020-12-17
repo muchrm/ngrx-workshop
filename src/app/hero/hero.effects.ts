@@ -6,11 +6,11 @@ import * as HeroReducer from './hero.reducer';
 import { exhaustMap, withLatestFrom } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
 import * as HeroSelectors from './hero.selectors'
-
+import * as fromApp from '../reducers'
 @Injectable()
 export class HeroEffects {
   constructor(
-    private store: Store<HeroReducer.State>,
+    private store: Store<fromApp.State>,
     private actions$: Actions
   ) {}
 
